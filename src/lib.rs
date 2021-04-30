@@ -9,7 +9,7 @@ use rand::{thread_rng, Rng, seq::SliceRandom};
 /// # Examples
 ///
 /// ```
-/// let result = randseqsum(10, 100);
+/// let result = randseqsum::randseqsum(10, 100);
 /// 
 /// assert_eq!(result.iter().sum::<i32>(), 100);
 /// ```
