@@ -9,11 +9,11 @@ use rand::{thread_rng, Rng, seq::SliceRandom};
 /// # Examples
 ///
 /// ```
-/// let result = seqsum(10, 100);
+/// let result = randseqsum(10, 100);
 /// 
 /// assert_eq!(result.iter().sum::<i32>(), 100);
 /// ```
-pub fn seqsum(nums: usize, total: i32) -> Vec<i32> {
+pub fn randseqsum(nums: usize, total: i32) -> Vec<i32> {
     let mut rng = thread_rng();
 
     let mut result = Vec::with_capacity(nums);
@@ -42,35 +42,35 @@ mod tests {
 
     #[test]
     fn very_small() {
-        let result = seqsum(1, 1);
+        let result = randseqsum(1, 1);
 
         assert_eq!(result, vec![1]);
     }
 
     #[test]
     fn small() {
-        let result = seqsum(2, 1);
+        let result = randseqsum(2, 1);
 
         assert_eq!(result.iter().sum::<i32>(), 1);
     }
 
     #[test]
     fn normal() {
-        let result = seqsum(10, 100);
+        let result = randseqsum(10, 100);
 
         assert_eq!(result.iter().sum::<i32>(), 100);
     }
 
     #[test]
     fn big() {
-        let result = seqsum(100, 1000);
+        let result = randseqsum(100, 1000);
 
         assert_eq!(result.iter().sum::<i32>(), 1000);
     }
 
     #[test]
     fn very_big() {
-        let result = seqsum(1000, 100000);
+        let result = randseqsum(1000, 100000);
 
         assert_eq!(result.iter().sum::<i32>(), 100000);
     }

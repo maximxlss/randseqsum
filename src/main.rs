@@ -35,5 +35,5 @@ fn main() {
         }
     };
 
-    println!("{:?}", randseqsum::seqsum(nums as usize, total));
+    println!("{:?}", randseqsum::randseqsum(nums as usize, total));
 }
