@@ -1,5 +1,18 @@
+//! # Randseqsum
+//!
+//! `randseqsum` is a simple function that generates a random integer sequence that sums up to some value.
+
 use rand::{thread_rng, Rng, seq::SliceRandom};
 
+/// Generates a random sequence of length nums that sums up to total
+///
+/// # Examples
+///
+/// ```
+/// let result = seqsum(10, 100);
+/// 
+/// assert_eq!(result.iter().sum::<i32>(), 100);
+/// ```
 pub fn seqsum(nums: usize, total: i32) -> Vec<i32> {
     let mut rng = thread_rng();
 
