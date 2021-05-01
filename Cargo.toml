@@ -1,6 +1,7 @@
 [package]
 name = "randseqsum"
 description = "A simple library+binary crate to find a random integer sequence that sums up to some value."
+repository = "https://github.com/Maxxls/randseqsum"
 version = "0.1.0"
 authors = ["maximxls"]
 edition = "2018"
